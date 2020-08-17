@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen Backery</title>
+    <link rel="stylesheet" type="text/css" href="/store.css" />
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li style="float: right;"><a href="#about">About</a></li>
+    </ul>
+    <h1>Naveen Backery</h1>
+
+    <div class="button" id="myBtnContainer">
+      <button id="all" class="btn active" onclick="filterSelection('all')">
+        ALL
+      </button>
+      <button id="cupcakes" class="btn" onclick="filterSelection('cupcakes')">
+        CUPCAKES
+      </button>
+      <button id="cakes" class="btn" onclick="filterSelection('cakes')">
+        CAKES
+      </button>
+      <button id="sweets" class="btn" onclick="filterSelection('sweets')">
+        SWEETS
+      </button>
+      <button id="nuts" class="btn" onclick="filterSelection('doughnuts')">
+        DOUGHNUTS
+      </button>
+    </div>
+    <input
+      type="text"
+      id="search"
+      onkeyup="myFunction()"
+      placeholder="Search for items...."
+      title="Type in a name"
+    />
+
+    <div id="items" class="container">
+      <div class="filter cakes">
+        <img src="images/cake1.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Strawberry cake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cakes">
+        <img src="images/cake2.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Chocolate cake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cakes">
+        <img src="images/cake3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Banana cake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter doughnuts">
+        <img src="images/nut1.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Chocolate Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter doughnuts">
+        <img src="images/nut2.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Bavarian Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet2.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >KajuBarfi</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cupcakes">
+        <img src="images/cupcake4.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Caramel CupCake</span
+        ><span class="price">$10</span>
+      </div>
+
+      <div class="filter doughnuts">
+        <img src="images/nut3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Cinnamon Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet1.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Rasagulla</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet4.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Rasmalay</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter doughnuts">
+        <img src="images/nut4.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Jelly Donut</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter sweets">
+        <img src="images/sweet3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >SweetRoll</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cupcakes">
+        <img src="images/cupcake3.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >MintOreo Cupcake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cupcakes">
+        <img src="images/cupcake2.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Chocolate CupCake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cupcakes">
+        <img src="images/cupcake1.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >Vanilla CupCake</span
+        ><span class="price">$10</span>
+      </div>
+      <div class="filter cakes">
+        <img src="images/cake4.jpg" height="200px" width="100%" /><span
+          class="itemname"
+          >WhiteCreamy Cake</span
+        ><span class="price">$10</span>
+      </div>
+    </div>
+    <script src="/store.js"></script>
+    <script>
+      function myFunction() {
+        var input = document.getElementById("search");
+        var filterr = input.value.toLowerCase();
+        var nodes = document.getElementsByClassName("filter");
+        for (i = 0; i < nodes.length; i++) {
+          if (nodes[i].innerText.toLowerCase().includes(filterr)) {
+            nodes[i].style.display = "block";
+          } else {
+            nodes[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
